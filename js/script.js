@@ -56,6 +56,19 @@ const automobili=[
     {
         marca:"renault",
         modello:"clio",
-        alimentazione:"metano"
+        alimentazione:"elettrico"
     },
 ]
+
+
+const gasCars = automobili.filter((singleCar) =>{
+    if (singleCar.alimentazione.includes('benzina')){
+        return true;
+    }
+});console.log(gasCars)
+
+const dieselCars = automobili.filter((singleCar) =>{
+    if (singleCar.alimentazione.includes('diesel')){
+        return true;
+    }
+});console.log(dieselCars)
