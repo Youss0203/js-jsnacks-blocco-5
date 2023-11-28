@@ -8,22 +8,22 @@ const campionato=[
     {
         nome:"juventus",
         punti_fatti:getRandomNumber(0,100),
-        falli_subit:45,
+        falli_subit:getRandomFalli(0,10),
     },
     {
         nome:"milan",
         punti_fatti:getRandomNumber(0,100),
-        falli_subit:65,
+        falli_subit:getRandomFalli(0,10),
     },
     {
         nome:"roma",
         punti_fatti:getRandomNumber(0,100),
-        falli_subit:43,
+        falli_subit:getRandomFalli(0,10),
     },
     {
         nome:"atalanta",
         punti_fatti:getRandomNumber(0,100),
-        falli_subit:23
+        falli_subit:getRandomFalli(0,10)
     },
 ];
 console.log(campionato)
@@ -31,5 +31,8 @@ console.log(campionato)
 
 
 function getRandomNumber(min,max){
+    return Math.floor(Math.random()*max-min)+min;
+}
+function getRandomFalli(min,max){
     return Math.floor(Math.random()*max-min)+min;
 }
