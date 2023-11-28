@@ -9,10 +9,19 @@ Nel caso la tab fosse attiva, deve attivare la successiva.*/
 
 
 const browserTab = {
-    tab: ["Facebook", "GitHub", "Gmail"],
+    tab: ["Facebook", "GitHub", "Gmail", "Youtube"],
     activeTab: 0
 };
 
+
+const social=["Instagram", "Telegram", "Youtube"]
+
+browserTab.tab = browserTab.tab.filter((element)=>{
+    if(!social.includes(element.toLowerCase())){
+        return true
+    }
+})
+console.log(browserTab)
 
 
 
