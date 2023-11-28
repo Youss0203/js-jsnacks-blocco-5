@@ -7,33 +7,38 @@ una frase con il nome e cognome e l'indicazione se può guidare,
 
  const people =[
     {
-        name: "gianmarco",
+        nome: "gianmarco",
         cognome:"tocco",
-        età:17
+        eta:17
     },
     {
-        name: "cristiano",
+        nome: "cristiano",
         cognome:"zano",
-        età:26
+        eta:26
     },
     {
-        name: "francesco",
+        nome: "francesco",
         cognome:"marzano",
-        età:45
+        eta:45
     },
     {
-        name: "zazzone",
+        nome: "zazzone",
         cognome:"ilzazza",
-        età:14
+        eta:14
     },{
-        name: "cristiano",
+        nome: "cristiano",
         cognome:"matara",
-        età:22
+        eta:22
     },
  ]
 
 
- const peopleLicense = people.map((people) => {
-    return people.età>18
- })
- console.log(peopleLicense)
+
+
+ const newPeopleArray = people.map((singlePerson) =>{
+    singlePerson.nomeCompleto = singlePerson.nome + ' ' + singlePerson.cognome;
+    singlePerson.maggiorenne = singlePerson.eta >= 18;
+    return singlePerson;
+});
+console.log(newPeopleArray)
+
