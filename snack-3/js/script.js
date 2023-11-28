@@ -16,7 +16,7 @@ const browserTab = {
 
 const social=["Instagram", "Telegram", "Youtube"]
 
-browserTab.tab = browserTab.tab.filter((element)=>{
+browserTab.tab = browserTab.filter((element)=>{
     if(!social.includes(element.toLowerCase())){
         return true
     }
