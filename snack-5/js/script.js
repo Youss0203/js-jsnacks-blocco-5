@@ -7,31 +7,29 @@ punti fatti e falli subiti*/
 const campionato=[
     {
         nome:"juventus",
-        punti_fatti:"",
-        falli_subit:"",
+        punti_fatti:getRandomNumber(0,100),
+        falli_subit:45,
     },
     {
         nome:"milan",
-        punti_fatti:"",
-        falli_subit:"",
+        punti_fatti:getRandomNumber(0,100),
+        falli_subit:65,
     },
     {
         nome:"roma",
-        punti_fatti:"",
-        falli_subit:"",
+        punti_fatti:getRandomNumber(0,100),
+        falli_subit:43,
     },
     {
         nome:"atalanta",
-        punti_fatti:"",
-        falli_subit:"",
+        punti_fatti:getRandomNumber(0,100),
+        falli_subit:23
     },
 ];
 console.log(campionato)
 
 
 
-const punti=Math.floor(Math.random()*60)
-const falli=Math.floor(Math.random()*50)
-
-
-const copyCampionato=[...campionato,punti,falli]
+function getRandomNumber(min,max){
+    return Math.floor(Math.random()*max-min)+min;
+}
